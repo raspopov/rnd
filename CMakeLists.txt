@@ -22,8 +22,7 @@ if( MSVC )
 	
 else()
 
-	set( CMAKE_CXX_FLAGS "-static -Wall -Wextra -Wpedantic -flto -ffat-lto-objects" )
-	set( CMAKE_AR "gcc-ar" )
+	set( CMAKE_CXX_FLAGS "-static -Wall -Wextra -Wpedantic" )
 
 endif()
 

@@ -8,7 +8,7 @@ where /q cmake
 if not %errorlevel% equ 0 echo CMake not found! && exit /b %errorlevel%
 
 rem Detect GCC
-set "PATH=%PATH%;C:\Qt\Tools\mingw810_64\bin"
+set "PATH=%PATH%;C:\Qt\Tools\llvm-mingw1706_64\bin"
 where /q g++
 if not %errorlevel% equ 0 echo GCC not found! && exit /b %errorlevel%
 
