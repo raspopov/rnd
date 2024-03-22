@@ -29,15 +29,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <cstring>
 #include <random>
 
+#include "version.h"
+
 using namespace std::chrono;
 
 const auto usage =
-	"rnd - The utility for the creation and verification of files filled with a pseudo-random sequence of bytes.\n"
+	PROJECT_NAME " - " PROJECT_DESCRIPTION "\n"
 	"\n"
-	"Copyright (C) 2024 Nikolay Raspopov <raspopov@cherubicsoft.com>\n"
-	"https://github.com/raspopov/rnd\n"
+	PROJECT_COPYRIGHT "\n"
+	PROJECT_HOMEPAGE_URL "\n"
 	"\n"
-	"Usage: rnd (\"create\"|\"verify\") file_name [ file_size (=0 - infinite) [K|M|G] [ pseudo-random_seed_number (=1) ] ]\n";
+	"Usage: " PROJECT_NAME " (\"create\"|\"verify\") file_name [ file_size (=0 - infinite) [K|M|G] [ pseudo-random_seed_number (=1) ] ]\n";
 
 unsigned char data[ 4 * 1024 ];
 unsigned char read[ sizeof( data ) ];

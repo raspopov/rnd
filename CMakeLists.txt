@@ -30,3 +30,15 @@ endif()
 add_executable( rnd
 	rnd.cpp
 )
+
+target_include_directories( rnd PRIVATE ${CMAKE_CURRENT_BINARY_DIR} )
+
+# Version
+configure_file( ${CMAKE_SOURCE_DIR}/version.h.in version.h @ONLY )
+target_sources( rnd PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/version.h )
+
+# Windows resources
+if( WIN32 )
+	configure_file( ${CMAKE_SOURCE_DIR}/resources.rc.in resources.rc @ONLY )
+	target_sources( rnd PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/resources.rc )
+endif()
