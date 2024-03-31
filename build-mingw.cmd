@@ -21,5 +21,5 @@ cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
 if not %errorlevel% equ 0 exit /b %errorlevel%
 
 rem Build a project
-cmake --build . --config Release
+cmake --build . --config Release --target package
 if not %errorlevel% equ 0 exit /b %errorlevel%

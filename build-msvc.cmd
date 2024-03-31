@@ -21,5 +21,5 @@ cmake .. -G "Visual Studio 17 2022" -A x64
 if not %errorlevel% equ 0 exit /b %errorlevel%
 
 rem Build a project
-cmake --build . --config Release
+cmake --build . --config Release --target package
 if not %errorlevel% equ 0 exit /b %errorlevel%
